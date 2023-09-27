@@ -1,0 +1,355 @@
+.navbar {
+  background-color: blue;
+  overflow: hidden;
+  margin: 0;
+}
+
+	.navbar a {
+	  float: right;
+	  text-align: center;
+	  padding: 1.5em 1.5em;
+  
+	  color: white;
+	  text-decoration: none;
+	  font-family: Verdana;
+	  font-size: 12px;
+	  font-weight: bold;
+	}
+
+		.navbar a[name="home"] {
+			float: left;
+		}
+
+		.navbar #navbarLeaderboard {
+			display: none;
+		}
+
+		.navbar #navbarRegister {
+			display: inline;
+		}
+
+		.navbar a:hover {
+		  background-color: darkblue;
+		}
+
+		.navbar #navbarAvatar {
+			position: relative;
+			float: right;
+			height: 2.5em;
+			width: 2.5em;
+			margin: 0.3em;
+			display: none;
+		}
+
+			.skinLayer {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				height: 100%;
+				z-index: 1;
+			}
+
+			.eyesLayer {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				height: 100%;
+				z-index: 3;
+			}
+
+			.mouthLayer {
+				position: absolute;
+				bottom: 30%;
+				left: 50%;
+				transform: translate(-50%, 30%);
+				height: 100%;
+				z-index: 2;
+			}
+
+body {
+	margin: 0;
+}
+
+* {
+	font-family: Verdana;
+}
+
+#main {
+	height: 100%;
+	z-index: -1;
+
+	background-image: url("arcade-unsplash.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	padding-top: 1em;
+	padding-left: 1em;
+	color: white;
+}
+
+	#index #unregistered {
+		text-align: center;
+		margin-top: 3em;
+		display: block;
+	}
+
+	#index #registered {
+		text-align: center;
+		margin-top: 2.5rem;
+		display: none;
+	}
+
+	#index h1 {
+		margin: 0;
+		padding-bottom: 0.5em;
+		font-size: 2.5em;
+	}
+
+		#index #registerLink {
+			text-decoration: none;
+			color: white;
+			font-size: 1.5em;
+		}
+
+		#index #playLink {
+			text-decoration: none;
+			color: white;
+			font-size: 1.5em;
+		}
+
+	#registration #usernameInput {
+		margin: 3rem 2rem;
+	}
+
+	#registration button {
+		border-radius: 0.5em;
+		font-weight: bold;
+		font-size: 1rem;
+		background-color: forestgreen;
+		padding: 1em;
+	}
+
+	#registration .dropDown {
+		position: relative;
+		display: inline-block;
+	}
+
+	#registration .dropdown-content {
+	}
+
+		#registration #usernameInput #errorMessage {
+			visibility: hidden;
+			color: red;
+		}
+
+		#registration #usernameInput #createAccount {
+			margin-left: 5em;
+		}
+
+
+	#registration #avatarCreator {
+		display: inline-block;
+		text-shadow: 0.1em 0.1em black;
+	}
+
+		#registration #avatarCreator .dropDown {
+			display: inline-block;
+			margin: 0.5rem 2rem;
+		}
+
+			#registration #avatarCreator a {
+				font-size: 24px;
+				font-weight: bold;
+				width: 50%;
+				margin: auto;
+				display: block;
+			}
+
+			#registration #avatarCreator select {
+				width: 100%;
+			}
+
+		#registration .avatarIcon {
+			position: relative;
+			height: 30rem;
+			margin-top: 3rem;
+		}
+
+
+#pairs {
+	background-color: gray;
+	box-shadow: 0.75rem 0.75rem #5A5A5A;
+	color: black;
+
+	height: 80%;
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+	#pairsHeader {
+		padding: 0.5em;
+		font-size: 3em;
+		text-align: center;
+		display: block;
+	}
+
+		#pairs #level {
+			float: left;
+		}
+
+		#pairs #points {
+			float: right;
+		}
+
+	#pairs #startGameButton {
+		border-radius: 0.5em;
+		font-weight: bold;
+		font-size: 3rem;
+		background-color: forestgreen;
+		padding: 1em;
+			
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	#pairs #levelCompleteMessage {
+		display: none;
+		font-weight: bold;
+		font-size: 3rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	#pairs #groupSizeMessage{
+		display: none;
+		font-size: 2rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 100%);
+	}
+
+	#pairs #cardsWrapper {
+		display: grid;
+		grid-gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+		top: 0;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+		#pairs .card {
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			order: 0;
+			border-style: solid;
+			border-color: black;
+			background-color: mediumblue;
+		}
+
+			#pairs .cardAvatar {
+				visibility: hidden;
+				position: relative;
+				min-height: 5rem;
+			}
+
+	#pairs #endGameScreen {
+		display: none;
+		text-align: center;
+		margin: 10%;
+	}
+
+		#pairs #endGameScreen #victoryMessage {
+			display: none;
+			font-weight: bold;
+			font-size: 3rem;
+		}
+
+		#pairs #endGameScreen #playAgainButton {
+			display: none;
+		}
+
+		#pairs #endGameScreen button {
+			border-radius: 0.5em;
+			font-weight: bold;
+			font-size: 1.5rem;
+			background-color: forestgreen;
+			padding: 0.25em;
+			margin: 0.5em;
+		}
+
+		#pairs #endGameScreen #submitQuestion {
+			display: none;
+			font-weight: bold;
+			font-size: 1.5rem;
+		}
+
+		#pairs #endGameScreen #submitButton {
+			display: none;
+		}
+
+
+#leaderboard {
+	background-color: gray;
+	box-shadow: 0.75rem 0.75rem #5A5A5A;
+	color: black;
+
+	height: 80%;
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#leaderboardHeader {
+	padding: 0.5rem;
+	display: inline-block;
+}
+
+	#leaderboard button {
+		font-size: 2rem;
+		background-color: lightgray;
+		padding: 0.25em;
+		margin: 0.5em;
+		display: inline-block;
+	}
+
+#leaderboard table {
+	margin: 2rem;
+	margin-top: 1rem;
+	font-size: 2rem;
+	border-spacing: 2px;
+}
+
+#leaderboard table th {
+	padding-right: 0.25em;
+	padding-left: 0.25em;
+	background-color: blue;
+	color: white;
+	font-weight: normal;
+}
+
+#leaderboard table .padding {
+	padding-right: 2em;
+}
+
+#leaderboard table .numbering {
+	text-align: center;
+}
+
+#leaderboard #totalScoresTable {
+	display: none;
+}

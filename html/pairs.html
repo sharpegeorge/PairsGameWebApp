@@ -1,0 +1,29 @@
+<title>ECM1417 - Pairs</title>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="../script.js"></script>
+</head>
+<div id="main">
+    <div id="pairs">
+
+        <div id="pairsHeader">
+            <a id="level">Level: 1</a>
+            <a id="timer">00:00</a>
+            <a id="points">Points: 0</a>
+        </div>
+
+        <button id="startGameButton" type="button" onclick="playLevel();">Start the game</button>
+        <a id="levelCompleteMessage">Level Complete!</a>
+        <a id="groupSizeMessage">Group size increased!</a>
+
+        <div id="endGameScreen">
+            <a id="victoryMessage">You Win! Score:</a><br />
+            <a id="submitQuestion">Do you want to submit score or play again?</a><br /><br />
+            <button id="submitButton" type="button" onclick="saveNewHighscore();">Submit score</button>
+            <button id="playAgainButton" type="button" onclick="playLevel();">Play again</button>
+        </div>
+
+        <div id="cardsWrapper"></div>
+
+    </div>
+</div>

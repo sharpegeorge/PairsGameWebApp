@@ -1,0 +1,37 @@
+<title>ECM1417 - Leaderboard</title>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="../script.js"></script>
+</head>
+<body onload="generateLevelScoresTable(); generateTotalScoresTable();"></body>
+
+<div id="main">
+    <div id="leaderboard">
+
+        <div id="leaderboardHeader">
+            <button id="levelScoresButton" type="button" onclick="showLevelScoresTable();">Scores per level</button>
+            <button id="totalScoresButton" type="button" onclick="showTotalScoresTable();">Best total scores</button>
+        </div>
+
+        <table id="levelScoresTable">
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th class="padding">Nickname</th>
+                    <th class="padding">Highscore</th>
+                </tr>
+            </thead>
+        </table>
+
+        <table id="totalScoresTable">
+            <thead>
+                <tr>
+                    <th>Ranking</th>
+                    <th class="padding">Nickname</th>
+                    <th class="padding">Highscore</th>
+                </tr>
+            </thead>
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,10 @@
+#1,Username:testUser,Score:2425,1!
+#2,Username:,Score:0,2!
+#3,Username:,Score:0,3!
+#4,Username:,Score:0,4!
+#5,Username:,Score:0,5!
+#6,Username:,Score:0,6!
+#7,Username:,Score:0,7!
+#8,Username:,Score:0,8!
+#9,Username:,Score:0,9!
+#10,Username:,Score:0,10!

@@ -1,0 +1,65 @@
+<title>ECM1417 - Registration</title>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script type="text/javascript" src="../script.js"></script>
+</head>
+
+<div id="main">
+	<div id="registration">
+		<form onsubmit="receiveRegistrationForm(username.value, skin.value, eyes.value, mouth.value); return false;">
+			<!--action="abc.php"-->
+			<div id="usernameInput">
+				<label for="username">Nickname:</label><br>
+				<input type="text" id="username" name="username" required>
+				<button type="submit" id="createAccount">Play Now</button><br>
+				<a id="errorMessage">Invalid input. Nicknames must be alphanumeric.</a>
+			</div>
+
+			<div id="avatarCreator">
+				<a>Create your own avatar!</a>
+				<br>
+
+				<div class="dropDown">
+					<label for="skin">Select a skin tone</label><br>
+					<select id="skin" name="skin" onchange="setSkinPreview(this.value);">
+						<option value="green">Green</option>
+						<option value="red">Red</option>
+						<option value="yellow">Yellow</option>
+					</select>
+				</div>
+
+				<div class="dropDown">
+					<label for="eyes">Select a pair of eyes</label><br>
+					<select id="eyes" name="eyes" onchange="setEyesPreview(this.value);">
+						<option value="closed">Closed</option>
+						<option value="laughing">Laughing</option>
+						<option value="long">Long</option>
+						<option value="normal">Normal</option>
+						<option value="rolling">Rolling</option>
+						<option value="winking">Winking</option>
+					</select>
+				</div>
+
+				<div class="dropDown">
+					<label for="mouth">Select a type of mouth</label><br>
+					<select id="mouth" name="mouth" onchange="setMouthPreview(this.value);">
+						<option value="open">Open</option>
+						<option value="sad">Sad</option>
+						<option value="smiling">Smiling</option>
+						<option value="straight">Straight</option>
+						<option value="surprise">Surprise</option>
+						<option value="teeth">Teeth</option>
+					</select>
+				</div>
+
+				<div class="avatarIcon">
+
+					<img class="skinLayer" id="skinPreview" src="../emojis/skin/green.png" alt="Avatar Skin">
+					<img class="eyesLayer" id="eyesPreview" src="../emojis/eyes/closed.png" alt="Avatar Eyes">
+					<img class="mouthLayer" id="mouthPreview" src="../emojis/mouth/open.png" alt="Avatar Mouth">
+
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
